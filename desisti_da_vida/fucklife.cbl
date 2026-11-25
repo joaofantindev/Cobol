@@ -1,7 +1,7 @@
       ******************************************************************
-      * Author:
-      * Date:
-      * Purpose:
+      * Author: jp
+      * Date: 25\11
+      * Purpose: perdi a fe na vida
       * Tectonics: cobc
       ******************************************************************
        IDENTIFICATION DIVISION.
@@ -43,6 +43,15 @@
                DISPLAY NUMERO
            END-PERFORM.
                *> CUIDADO COM PONTOS, DEVEM ESTAR NO LOCAL CORRETO
+
+           ADD 1 TO NUMERO.
+
+           DISPLAY "ADICIONEI 1" NUMERO
+
+           SUBTRACT 1 FROM NUMERO
+
+           DISPLAY "TIREI 1 DO NUMERO"NUMERO
+
 
            STOP RUN.
        END PROGRAM YOUR-PROGRAM-NAME.
