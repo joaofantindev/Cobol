@@ -15,6 +15,7 @@
        01  ESTOQUE PIC 9(3).
        01  VENDIDOS PIC 9(3).
        01  RESTANTES PIC 9(3).
+       01  NUMERO PIC 9(2).
 
        PROCEDURE DIVISION.
        MAIN-PROCEDURE.
@@ -36,6 +37,12 @@
            PERFORM 5 TIMES
                DISPLAY "3 VZS!"
            END-PERFORM.
+
+           PERFORM VARYING NUMERO FROM 1 BY 1
+               UNTIL NUMERO > 20
+               DISPLAY NUMERO
+           END-PERFORM.
+               *> CUIDADO COM PONTOS, DEVEM ESTAR NO LOCAL CORRETO
 
            STOP RUN.
        END PROGRAM YOUR-PROGRAM-NAME.
