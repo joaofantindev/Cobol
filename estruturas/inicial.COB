@@ -1,32 +1,35 @@
-      ******************************************************************
-      * Author:devmerda
-      * Date:21 do 11 de 2026
-      * Purpose: suicidio provavel
-      * Tectonics: cobc
-      ******************************************************************
        IDENTIFICATION DIVISION.
-       PROGRAM-ID. MEU-PROGRAMA.
+       PROGRAM-ID. RECRUTA.
+
        DATA DIVISION.
-       FILE SECTION.
        WORKING-STORAGE SECTION.
-       01  NOME PIC X(20) VALUE "JOAO".
-       01  STATS PIC X(20) VALUE "ATIVO PAPORRA".
+
+       01  NOME PIC X(30).
        01  IDADE PIC 99.
+       01  PAIS PIC X(30).
 
        PROCEDURE DIVISION.
 
-       MAIN-PROCEDURE.
-            DISPLAY "SDRAST VUITSYA BRAT KAK DILLA?"
-
-           DISPLAY "DIGITE SEU NOME: "
+           DISPLAY "NOME:"
            ACCEPT NOME.
 
-           DISPLAY "DIGITE SUA IDADE: "
+           DISPLAY "IDADE:"
            ACCEPT IDADE.
-           DISPLAY "==== SLAVIK SYSTEM ===="
-           DISPLAY "-----------------------"
-           DISPLAY "NOME: " NOME.
+
+           DISPLAY "PAIS:"
+           ACCEPT PAIS.
+
+           DISPLAY "----------------------"
+           DISPLAY "CADASTRO: " NOME.
            DISPLAY "IDADE: " IDADE.
-           DISPLAY "-----------------------"
-            STOP RUN.
-       END PROGRAM MEU-PROGRAMA.
+           DISPLAY "PAIS: " PAIS.
+
+           IF IDADE >= 18
+               DISPLAY "STATUS: ADULTO."
+           ELSE
+               DISPLAY "STATUS: MENOR."
+           END-IF.
+
+           STOP RUN.
+
+       END PROGRAM RECRUTA.
